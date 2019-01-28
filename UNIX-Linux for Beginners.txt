@@ -1,0 +1,172 @@
+# Alias za kreiranje vremena i kalendara
+alias time-date='date && cal'
+
+#listanje foldera i podataka
+ls
+ls -l
+alias ls='ls -l'
+
+#disk free human read
+df
+df -h
+alias df='df -h'
+
+#xedit .bashrc
+
+
+#funkcije
+#open xedit
+
+name () {  		#ime funkcije
+	command		#naredbe
+	commands2
+	return		
+}
+
+rxport -f name		#export naredbe u sustav
+
+#backup .bashrc
+cp .bashrc .bash.backup
+
+#xedit profile -> svaki korisnik koji uðe u bash
+#xedit bash.bashrc -> default postavke za korisnika
+
+#ls ch*.doc -> traži sve koji poèinju sa ch a završavaju sa .doc
+#ls *.doc -> traži samo one koji završavaju sa .doc
+
+#################################################################
+FILE MANAGEMENT
+# vi filename -> piši nešto
+# esc -> shift + zz
+l -> desno 
+h -> lijevo
+k -> gore
+j -> dolje
+
+# cat filename / cat -b filename -> prikaz/prikaz sa brojem linija
+# wc filename -> broj linija,slova i karaktera
+# cp filename copyfile -> kopira filename,pod imenom copyfile 
+# mv filename filename2 -> mijenja ime iz filename u filename2
+# rm filename -> briše fajl
+
+#################################################################
+DIRECTORY MANAGEMENT
+# cd ~ -> home directory
+# cd ~ username -> home directory odreðenog usera
+# cd - -> zadnji direktorij
+# pwd -> trenutni direktorij
+# ls dirname -> listanje file-ova odreðenog direktorija
+# mkdir dirname -> kreiranje direktorija
+# mkdir -p /tmp/j051p/test -> kreira parent direktorij
+# rmdir dirname -> brisanje direktorija
+# cd dirname -> prebacivanje u direktorij
+# mv oldir newdir -> mijenanje imena direktorija
+# ls -la -> .(trenutni direktorij), ..(direktorij iznad)
+
+#################################################################
+FILE PERMISSION/ACCESS MODES
+
+# ls -l /home/j051p -> podaci o pristupu podacima
+# -rwxr-xr-- represents that the owner has read (r), write (w) and execute (x) permission
+# -rwxr-xr-- represents that the group has read (r) and execute (x) permission, but no write permission
+# -rwxr-xr-- represents that there is read (r) only permission
+# chmod o+wx -> dajemo ovlasti tom file-u (+, -, =) symbolic mode
+
+######################################### absolute permissions
+# 0 (nema ovlasti(---))
+# 1 (izvrši ovlasti(--x))
+# 2 (piši(-w-))
+# 3 (izvrši i piši(-wx)) -> 1+2=3
+# 4 (èitaj(r--))
+# 5 (èitaj i izvrši(r-x)) -> 4+1=5
+# 6 (èitaj i piši(rw-)) -> 4+2=6
+# 7 (sve ovlasti(rwx)) -> 4+2+1=7
+###############################################################################################
+
+# chown j051p testfile -> mijenja vlasnika
+# chgrp special testfile -> mijenja se grupa kojoj vlasnik pripada
+# SUID -> set user id (dodatne ovlasti)
+# SGID -> set group id
+# 
+# chmod ug+s dirname -> postavljanje SUID i SGID za direktorij
+
+########################################################################################################################
+ENVIRONMENT
+
+# test="unix programming" -> echo $test
+# TERM=vt100 -> lowest common denominator
+# $PATH=/bin:/usr/bin -> lokacija gdje shell traži naredbe
+# PS1 -> karakteri koje shell prikazuje (umjesto $ može =>)
+# =>PS1="[\u@\h \w]\$" -> prikazuje radni direktorij uz prompt
+
+# 	$ echo "this is a
+	> test"
+	this is a
+	test
+	$
+
+# 	$ PS2="secondary prompt->"
+	$ echo "this is a
+	secondary prompt->test"
+	this is a
+	test
+	$ 
+########################################################################################################################
+BASIC UTILITIES - PRINTING,EMAIL
+
+# pr -2 -h "Imena" doc -> naslov Imena, 2 kolone, file -> doc
+# lp/lpr -> printanje na ureðaj
+# lpstat -o/lpq -> printer
+############################################################################################################################################
+PIPES AND FILTERS 
+
+# $grep pattern file(s) -> globally search for a regular expression and print all lines containing it
+# ls -l (pipe) grep "proba" -> traži proba
+# dodaci (grep) -> -v (printa linije koje ne slažu se sa uzorkom), -n (printa uzorak i broj linija)
+# dodaci (grep) -> -l (printa samo imena file-ova koji poèinju sa "I"), -c (printa samo broj linija koje sa slažu sa uzorkom)
+# dodaci (grep) -> -i (slaže se sa visokim i malim slovima)
+
+# sort -> sortira linije teksta abecedno
+# dodaci (sort) -> -n (sortira numerièki), -r (unatrag sortira), -f (sortira velika i mala slova skupa), +x (ignorira prvi x kad sortira) 
+# pg -> display nestane kad je ekran pun
+# more -> lakše za èitanje
+
+#############################################################################################################################################
+PROCESSES MANAGEMENT
+
+# pid -> process ID, ls up*.log (ispis datoteka koje kreæu sa up, a završavaju sa .log)
+# ls up*.log & -> kreira se background proces (dobiva se pid)
+# ps -> running processes, ps -f -> full information
+# dodaci (ps) -> -a (info o svim korisnicima), -x (info o procesima bez terminala) 
+# dodaci (ps) -> -u (dodatni info kao f-opcija), -e (display dodatnog infa)
+# kill (PID), kill -9 (PID)
+# top/htop -> prikaz procesa po kriterijima  
+############################################################################################################################################################################
+NETWORK COMMUNICATION UTILITIES
+
+# ping -> provjera remote host-a
+# ftp -> upload/download 
+# telnet -> spajanje na udaljeno raèunalo 
+# finger -> info o korisnicima na odreðenom raèunalu (local/remote)
+# finger j051p -> odreðeni korisnik
+# finger @avtar.com -> logirani korisnici na remote raèunalu
+# finger j051p@avtar.com -> info o j051p na remote raèunalu
+############################################################################################################################################################################
+VI EDITOR TUTORIAL 
+
+# vi filename -> kreira file ili otvara postojeæi
+# vi -R filename -> otvara file u read-only modu
+# view filename -> otvara u read u read-only modu
+# ~ -> nekorištena linija, ako je nema onda imamo blank (space, tab, newline)
+# command mode -> save files, izvršavanje komandi, pomicanje kursora, cut, paste, finding, replacing
+# insert mode -> text into file 
+# sve ostalo na web stranici 
+#####################################################################################################################################################################
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+BASH -> SYSTEM ADMNISTRATION TOOLS
+
+free -> memory info (used,free)
+free -h -> humanly readable
+df -h -> files system memory (devsdb1,devsdb3)
+du -> list all directories
+du [pipe] less -> page by page scroll
+watch free -h -> same as free -h (or free)
+watch -n 0.1 date -> real time watch
+dmesg -> all actions Linux kernel has taken
+dmesg [pipe] tail -> displays last 10 lines
+tail /var/log/syslog -> last 10 things system has done
+tail /var/log/syslog > logtail.txt -> redirects to .txt (logs)
+journalctl -> systemd info (boot info)
+top -> info about system
+htop -> advance version of top (kill process)
+killall [program name] -> kills program
+ifconfig -> info about network
+ifconfig > if.txt (file with network info)
+ping [web adress] -> sends message to adress (loop) 
+lsblk -> list of all hard drives,partitions
+sudo mount /dev/sda2 /mnt -> mount drive
+cd /mnt -> looks for mounted drive
+/mnt$ ls -> list files on drive
+/mnt$ cd..
+/mnt$ sudo umont /dev/sda2 -> unmounts drive(s)
+sudo fdisk -l -> list all info about disk
+sudo blkid -> drives in system
+uname -a -> info about system (kernel,host)
+history -> history of commands
+history [pipe] less -> page by page
+TAB KEY -> AUTOCOMPLETE
+cal -> calendar
+sudo e4defrag /home -c -> defrag hard drive(s)
+sudo reboot -> restart machine
+sudo shutdown -r/h (restart/turn off)
+sudo shutdown -h 20 -> machine going off in 20 minutes
+sudo shutdown -c -> cancels shutdown
+
+

@@ -1,0 +1,13 @@
+BASH BASICS -> CREATING & EDITING TEXT FILES
+
+cat "filename.txt" -> prints text (small file)
+/junk$ less "filename.txt" -> working with bigger file,page by page
+/junk$ echo "Cat is great too.!" > junk2.txt -> prints written text
+/junk$ cat junk.txt junk2.txt -> ouput text files
+/junk$ cat junk.txt junk2.txt | less -> merge files
+/junk$ less /etc/fstab -> information conf.files
+/junk$ echo "I added this line" >> junk2.txt -> adding lines
+nano -> opens nano text editor
+CTRL + X -> exit nano
+/junk$ nano /etc/fstab
+sudo nano /etc/fstab -> superuser priv.

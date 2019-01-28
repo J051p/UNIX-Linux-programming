@@ -1,0 +1,40 @@
+BASH AND BASICS PART 1 -> ACCESS AND NAVIGATION
+
+Synopsis -> bash [options] [command_string | file]
+ALT + CTRL -> F1-F8=tty (teletype machine) 
+
+pwd -> present working directory
+
+File system ->                         / (root)
+ 
+    etc (config.files)  dev (devices)  home                usr (univ.sys.res.)  var (logs)
+
+                                       jono (work,photos)  lib (files for app.)
+                                       mako
+                                       cory
+ls -> list storage
+ls / -> root folder
+cd / -> move to folder
+cd   -> home folder
+cd Music -> ls -> Music list storage
+ls -a -> hidden files
+."text" -> hidden file
+ls -a - l -> all files,folders of a directory
+mkdir "junk" -> directory junk (+ ls)
+absolute path -> cd /home/joe/junk
+pushd /home/cindyb -> working in two directories
+popd -> back to your directory
+touch -> create files (dir junk)
+$junk touch "filename1" "filename2" -> create more than one file 
+$junk ls -l -> list of files inside junk directory
+rm "filename" -> delete file
+mv "filename" "filename.txt" -> changing names of files
+$junk mkdir files -> creating new dir
+$junk mv "filename.txt" /home/joe/junk/files/ -> moved file to files directory
+rm -r junk -> removing directory
+cp "filename.txt" "filename.bak.txt" -> copying files 
+cp "filename.txt" ~/ -> copying into root
+cp "*.txt" ~/ -> copying more than one file with unique sign
+rm *.bak.txt -> removes files with txt extensions
+
+

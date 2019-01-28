@@ -1,0 +1,27 @@
+#################################################################################################################################################
+# REGULAR EXPRESSIONS WITH SED
+# regular expression -> Unix commands (ed, sed, awk, grep, vi)
+# stream editor -> sed (executing scripts)
+# invoking sed -> local copy of /etc/passwd text file to work with sed
+# syntax -> $ cat /etc/passwd | sed (cat -> dumps the contents of /etc/passwd to sed trough the pipe)
+# general syntax -> /pattern/action = action -> command (p -> prints the line, d -> deletes the line, s/pattern1/pattern2/ -> substitute)
+# deleting all lines with sed -> $ cat /etc/passwd | sed 'd'
+# $ sed -e 'd' /etc/passwd -> same as previous without cat command
+# sed addresses -> particular locations in a file or a range where particular editing command should be applied
+# sed addresses syntax -> $ cat /etc/passwd | sed '1d' |more -> 1 is added before delete command
+# sed addresses ranges -> $ cat /etc/passwd | sed '1, 5d' |more -> delete from line 1 to line 5
+# using p, use -n option to avoid repetition of line printing -> $ cat /etc/passwd | sed -n '1,3p'
+# the substitution command -> s, substitute any string that we specify -> syntax -> $ cat /etc/passwd | sed 's/root/amrood/'
+# global substitution -> add letter g to the end of the line, syntax -> $ cat /etc/passwd | sed 's/root/amrood/g
+# using an alternative string separator -> on string with forward slash / -> syntax -> $ cat /etc/passwd | sed 's:/root:/amrood:g'
+# replacing with empty space -> $ cat /etc/passwd | sed 's/root//g'
+# address substitution -> string sh with the string quiet only on line 10 -> syntax -> $ cat /etc/passwd | sed '10s/sh/quiet/g'
+# matching command -> matching lines -> syntax -> $ cat testing | sed -n '/root/p'
+# using regular expressions -> match all lines with daemon then deletes them -> syntax -> $ cat testing | sed '/^daemon/d'
+# delete all lines ending with sh -> $ cat testing | sed '/sh$/d'
+# character class keyword -> special keywords avaible to regexps (GNU utilities)
+# a trough z and A trough Z -> class, keyword [[:alpha:]] -> syntax -> $ cat /etc/syslog.conf | sed -n '/^[[:alpha:]]/p'
+# aamersand referencing -> sed metacharacter & = contents of the pattern that was matched
+# area code (first 3 digits) -> syntax -> $ sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g' phone.txt
+#################################################################################################################################################
+# FILE SYSTEM BASICS

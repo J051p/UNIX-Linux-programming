@@ -1,0 +1,75 @@
+BASH -> BASH SCRIPTING
+
+Open Nano editor
+
+1.
+#!/bin/bash -> hashbang
+# comments
+
+clear -> cleans screen
+read -p "Press Enter to start." -> pause the system
+echo -e "Please enter your name: "
+read name -> prints out the name
+echo "Nice to meet you, $name"
+Save script.
+
+/Scripts$ nanno
+/Scripts$ ls
+chmod +x [file] -> executable file = runs script
+/Scripts$ ./hello 
+
+free -h && df -h -> two commands
+
+2.
+#!/bin/bash
+
+clear
+echo "Memory Usage:"
+free -h
+
+echo "Disk Usage:"
+df -h
+
+Save as Resources
+/Scripts$ chmod +x Resorces
+/Scripts$ ls (Resources)
+/Scripts$ ./Resources -> run script 
+
+3.
+#!bin/bash
+#Update Script
+
+echo "Update starts a:" > /home/joe/update.log -> creates update.log
+date >> /home/joe/.update.log -> date to update.log
+echo "Checking for updates..." 
+sudo apt-get update 2>> /home/joe/.update.log >> /home/joe/.update.log 
+echo "Installing updates..."
+sudo apt-get dist-upgrade -yy 2>> /home/joe/.update log. >> /home/joe/.update.log($) -> yy(yes yes.default)
+echo "Removing orphaned packages..."
+sudo apt-get autoremove -yy 2>> /home/joe/.update.log >> /home/joe/.update.log
+echo "Clearing apt cache"
+sudo apt-get clean 2>> /home/joe/.update.log >> /home/joe/.update.log
+echo "Complete!" [pipe] tee -a /home/joe/.update.log -> tee (ouput on screen,append to log file)
+echo "System will restart in 30 seconds."
+sleep 30
+sudo reboot 
+
+/Scripts$ cd /bin -> scripts
+ls -> list of scripts
+
+/bin$ sudo cp hello /bin/ -> script avaible system wide
+/bin$ update -> run script for update
+
+
+
+
+
+
+
+
+
+
+
+
+
+

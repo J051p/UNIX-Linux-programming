@@ -1,0 +1,10 @@
+BASH BASICS -> PRIVILEGES AND PERMISSIONS
+
+apt autoremove -> without sudo 
+sudo apt autoremove -> password
+sudo -s -> root #,without sudo
+/junk# touch root.txt -> create file -> exit
+/junk$ chmod 760 junk.txt -> privileges
+/junk$ chmod -x junk.txt -> not executable
+/junk$ chmod 644 *.txt -> all files with .txt exe
+/junk$ sudo chown jo:joe root.txt -> changing owner

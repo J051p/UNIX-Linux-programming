@@ -1,0 +1,12 @@
+BASH BASICS -> FINDING DOCUMENTATION AND FILES
+
+man man -> maunal page for manual command
+man mv, man htop, man firefox, man bleachbit, man cd (no man page)
+info -> same as manual command
+which -> prints out path where program is installed
+$PATH -> prints out variables where program might live
+cd junk -> /junk$ find -name junk.txt -> find files
+/junk$ find /etc -name fstab -> find files
+/junk$ grep Nano junk.txt -> return lines with keyword "Nano"
+/junk$ grep Nano junk.txt > grep.txt -> moves junk.txt to a grep.txt
+

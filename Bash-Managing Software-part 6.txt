@@ -1,0 +1,30 @@
+BASH BASICS -> MANAGING SOFTWARE (UBUNTU)
+
+apt, apt-get
+sudo apt update -> update repositories for new packages
+sudo apt upgrade -> looks for packages that can be upgraded 
+sudo apt dist-upgrade -> updates kernel,everything on system
+sudo apt remove htop -> removes htop,but leaves conf.files
+sudo apt purge htop -> removes htop 
+sudo apt install htop -> install htop 
+apt-cache search htop -> looks for everything with htop
+apt-cache search firefox [pipe] less -> page by page search
+sudo apt remove google-chrome-stable -> removes google chrome stable
+wget [paste link] -> downloading package from google
+sudo dpkg -i [name of the pacakage] -> installs package
+
+ppa -> private package archive
+sudo add-apt-repository ppa:pj-assis/ppa -> ppa added
+sudo apt update -> looks for ppa
+
+cd /etc/apt/sources.list.d -> all repositories, with ls
+cd /etc/apt/sources.list.d$ sudo rm -r [name of ppa] -> removes ppa from rep.
+
+sudo apt autoremove -> looks for pacakages that are not needed anymore
+sudo apt clean -> cleans cache memory
+sudo apt autoclean -> goes trough all lists,cache memory
+man apt -> manual for apt command
+
+
+
+
