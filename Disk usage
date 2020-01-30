@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+#Show free and used space
+echo "Free and used space:"
+df -h
+
+#Show free and used nodes
+echo "Free and used nodes:"
+df -i
+
+#Display disks partitions sizes and types
+echo "Disks partitions and sizes:"
+sudo fdisk -l
+
+#Usage for all files and directories
+echo "Usage for all files and directories:"
+du -ah
+
+#Display total disk usage off the current directory
+echo "Total disk usage:"
+du -sh
+

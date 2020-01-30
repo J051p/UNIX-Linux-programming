@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Update repositories for new packages
+echo "Update repositories for new packages:"
+sudo apt update
+
+#Look for packages that can be upgraded
+echo "Look for packages that can be upgraded:"
+sudo apt upgrade
+
+#Update kernel
+echo "Update kernel:"
+sudo apt dist-upgrade
+
+#Look for packages that are not needed anymore
+echo "Look for packages that are not needed anymore:"
+sudo apt autoremove
+
+#Clean cache memory
+echo "Clean cache memory:"
+sudo apt autoclean
+

@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+#Display recent activities
+echo "Last activities:"
+last
+
+#Display sockets
+echo "Established connections and listening ports:"
+ss -t
+ss -ltn
+
+#Display IP
+echo "Information on network interface:"
+ip 
+ip route
+

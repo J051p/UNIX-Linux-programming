@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#Virtual memory
+echo "Virtual memory:"
+vmstat
+
+#Open files and processes
+echo "Open files and processes:"
+lsof
+
+#Packages
+echo "Packages:"
+netstat
+
+#Input/output
+echo "I/O statistics:"
+iostat
+

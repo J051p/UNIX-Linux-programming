@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#Display CPU info
+echo "CPU info:"
+cat /proc/cpuinfo
+
+#Display memory info
+echo "Memory info:"
+cat /proc/meminfo
+
+#Display PCI devices
+echo "PCI devices:"
+lspci -tv
+
+#Display USB devices
+echo "USB devices:"
+lsusb -tv
+

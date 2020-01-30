@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+#Display user and group ids
+echo "User/Group id:"
+id
+
+#Display last user
+echo "Last user:"
+last
+
+#Who is logged into the system
+echo "Who is logged into the system:"
+who
+
+#Who is logged and what are they doing
+echo "Who is logged in and what are they doing:"
+w
+
+#List all files
+echo "List all files:"
+ls -al
+
+#Display the present working directory
+echo "Present working directory:"
+pwd

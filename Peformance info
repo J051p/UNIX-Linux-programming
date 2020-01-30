@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+#Interactive top
+echo "Visual top:"
+htop
+
+#Display processor statistics
+echo "Processor stats:"
+mpstat
+
+#Virtual memory statistics
+echo "Virtual memory stats:"
+vmstat
+
+#I/O statistics
+echo "I/O stats:"
+iostat
+
+#Display current process
+echo "Current process:"
+ps
+
+#Display all current processes
+echo "All current processes:"
+ps -ef
+

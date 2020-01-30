@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+#Display BIOS info
+echo "BIOS info:"
+sudo dmidecode
+
+#Show info about disk sda
+echo "sda info:"
+sudo hdparm -i /dev/sda
+

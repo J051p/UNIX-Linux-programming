@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#Display Linux system information
+echo "Display Linux system information:"
+uname -a
+
+#Display kernel release information
+echo "Display kernel release information:"
+uname -r
+
+#Sytem run + load
+echo "System has been running:"
+uptime
+
+#System host name
+echo "System host name:"
+hostname
+
+#IP address
+echo "IP address of the host:"
+hostname -I
+
+#Reeboot history
+echo "Reboot:"
+last reboot
+
+#Who is online
+echo "Online:"
+w
+
+#Who is logged in
+echo "Logged in as:"
+whoami
+
