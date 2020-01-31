@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+#Checking the APT cache size
+echo "Checking the APT cache size..."
+sudo du -sh /var/cache/apt
+
+#Two ways of cleaning cache
+echo "Cleaning APT cache..."
+sudo apt-get autoclean
+sudo apt-get clean
+
+#Checking the log size
+echo "Checking the log size..."
+journalctl --disk-usage
+
+#Cleaning the logs
+echo "Cleaning the logs..."
+sudo journalctl --vacuum-time=3d
+
+#Checking thumbnail size
+echo "Checking thumbnail size..."
+du -sh ~/.cache/thumbnails
+
+#Cleaning thumbnails
+echo "Cleaning thumbnails..."
+rm -rf ~/.cache/thumbnails/*
+
+
