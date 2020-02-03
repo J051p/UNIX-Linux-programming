@@ -8,7 +8,7 @@ uname -a
 echo "Display kernel release information:"
 uname -r
 
-#Sytem run + load
+#System run + load
 echo "System has been running:"
 uptime
 
