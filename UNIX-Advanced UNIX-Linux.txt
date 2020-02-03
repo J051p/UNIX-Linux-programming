@@ -23,5 +23,4 @@
 # a trough z and A trough Z -> class, keyword [[:alpha:]] -> syntax -> $ cat /etc/syslog.conf | sed -n '/^[[:alpha:]]/p'
 # aamersand referencing -> sed metacharacter & = contents of the pattern that was matched
 # area code (first 3 digits) -> syntax -> $ sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g' phone.txt
-#################################################################################################################################################
-# FILE SYSTEM BASICS
+##########################################################################################################################################
