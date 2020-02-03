@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+#Memory information
+echo "Displaying memory information..."
+cat /proc/meminfo
+
+#Info about the Linux system
+echo "Info about Linux system"
+cat /proc/version
+
+#PCI devices
+echo "PCI devices"
+lspci
+
+#USB devices
+echo "USB devices"
+lsusb
+
+#External IP
+echo "Displaying external IP address..."
+curl ifconfig.me
+
+#Uptime of machine
+echo "Uptime"
+uptime
+
+#Disk usage info
+echo "Displaying disk usage..."
+df -k
+
