@@ -6,4 +6,4 @@ backup.sh is a script for backing up individual directories (in this case Python
 
 update.2 is advanced version of previous "Update" script. This one includes usage of funcions.
 
-Sysadmintool is all in one script (program).
+Sysadmin tool is all in one script (program).
