@@ -1,0 +1,82 @@
+#!/bin/bash
+
+#Check for less utility and install them if needed.
+
+dpkg -l | grep -qw less || sudo apt install less -yyq
+
+#Set BASH to quit script and exit if there is an error.
+
+set -e
+
+#Functions.
+
+update() {
+
+echo "Starting full system update..."
+sudo apt update
+sudo apt full-upgrade -yy
+
+}
+
+clean() {
+
+echo "Removing apt cache packages than are not available..."
+sudo apt autoclean
+
+}
+
+remove(){
+
+echo "Removing orphaned packages..."
+sudo apt autoremove -yy
+
+}
+
+
+leave() {
+
+echo "_______"
+echo "Full system update completed!"
+echo "_______"
+exit 
+
+}
+
+#Update and clean.
+
+if [ "$1" == "--clean" ]; then
+	update
+	remove
+	clean
+	leave
+
+fi
+
+#Update and remove orphaned packages.
+
+if [ "$1" == "--remove" ]; then
+	update
+	remove
+	leave
+
+fi
+
+	update
+	leave
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
