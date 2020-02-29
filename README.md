@@ -7,3 +7,5 @@ backup.sh is a script for backing up individual directories (in this case Python
 update.2 is advanced version of previous "Update" script. This one includes usage of functions.
 
 Sysadmin tool is all in one script (program).
+
+Monitor is another script for monitoring your system, includes known commands.
