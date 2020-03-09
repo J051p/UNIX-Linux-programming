@@ -1,6 +1,6 @@
 # UNIX/Linux-programming
 
-Scripts for UNIX/Linux system including scripts for Ubuntu 19.10 (Eoan Ermine).
+Scripts for UNIX/Linux system including scripts for (tested on) Ubuntu 19.10 (Eoan Ermine).
 
 backup.sh is a script for backing up individual directories (in this case Python folder, change username inside script for usage). After backing up folder, you can find tar.tgz file in your home/username/Backups folder (before using script, create Backups folder as a destination folder for tar.tgz file).
 
